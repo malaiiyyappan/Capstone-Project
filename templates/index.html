@@ -1,0 +1,250 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title> Ride Hailer</title>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="Asap Cab Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script>
+        addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+
+    </script>
+    <!-- //Meta tag Keywords -->
+    <!-- Custom-Files -->
+   
+    <!-- Bootstrap-Core-CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}" type="text/css" media="all" />
+    <!-- Style-CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css" media="all" />
+    <!-- font-awesome-icons -->
+    <link href="{{ url_for('static', filename='css/font-awesome.css') }}" rel="stylesheet">
+    <!-- //font-awesome-icons -->
+    <!-- /Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Khula:300,400,600,700,800" rel="stylesheet">
+    <!-- //Fonts -->
+</head>
+    
+
+<body>
+    <!-- mian-content -->
+    <div class="main-content" id="home">
+        <div class="layer">
+            <!-- header -->
+            <header>
+                <div class="container-fluid px-lg-5">
+                    <!-- nav -->
+                    <nav class="py-4 d-lg-flex">
+                        <div id="logo">
+                            <h1> <a href="index.html">Ride-Hailer</a></h1>
+                        </div>
+                        <label for="drop" class="toggle">Menu</label>
+                        <input type="checkbox" id="drop" />
+                        <ul class="menu mt-2 ml-auto">
+                            <li class="active"><a href="index.html">Home</a></li>
+                            <li><a href="#msform" class="scroll">Price Predictor</a></li>
+                            <li><a href="#about" class="scroll">About</a></li>
+                            <li><a href="#Cars" class="scroll">Available Cars</a></li>
+                            <li><a href="#locations" class="scroll">Where are we Serving?</a></li>
+                        </ul>
+                    </nav>
+                    <!-- //nav -->
+                </div>
+            </header>
+            <!-- //header -->
+            <div class="container">
+                <!-- /banner -->
+                <div class="banner-info-w3ls text-left">
+                    <h3>$ave your time, we will help you choose the best ride for you!</h3>
+                    <div class="read-more">
+                        <a href="#msform" class="read-more scroll btn">Try it out </a> </div>
+                </div>
+                <div class="row order-info">
+                    <div class="middle mt-md-3 col-sm-6 text-left">
+                        <ul class="social mb-4">
+                            <li><a href="https://github.com/malaiiyyappan"><span class="fa fa-github" style="font-size:48px" ></span></a></li>
+                            <li><a href="https://twitter.com/Malai_23"><span class="fa fa-twitter icon_twitter" style="font-size:48px"  ></span></a></li>
+                            <li><a href="https://www.reddit.com/user/buckbuckyyy"><span class="fa fa-reddit" style="font-size:48px"></span></a></li>
+                            <li><a href="https://www.linkedin.com/in/muthhukumar-malaiiyyappan-89aba054/"><span class="fa fa-linkedin icon_linkedin" style="font-size:48px"></span></a></li>
+
+                        </ul>
+
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- //banner -->
+        </div>
+    </div>
+    <!--// mian-content -->
+        <!-- prediction -->
+    <!-- multistep form -->
+    
+    <div class="row"> 
+    <div class="col-lg-12 ab-content">
+    <form action="{{ url_for('predict')}}"method="post" id="msform">
+      
+      <!-- fieldsets -->
+      <fieldset>
+  
+       
+          <label for = 'source'> Pick Up </label>
+            <select name = 'source' id = 'source'>
+                <option> Financial District </option> 
+                <option> Back Bay</option> 
+                <option> Beacon Hill</option> 
+                <option> Boston University</option> 
+                <option> North End</option> 
+                <option> South Station</option> 
+                <option> Northeastern University</option> 
+                <option> Haymarket Square</option> 
+                <option> Fenway </option> 
+                <option> North Station </option> 
+                <option> West End </option> 
+                <option> Theatre District </option> 
+            </select>
+
+     
+       
+          <label for = 'destination'> End</label>
+            <select name = 'destination' id = 'destination'>
+                <option> Financial District </option> 
+                <option> Back Bay</option> 
+                <option> Beacon Hill</option> 
+                <option> Boston University</option> 
+                <option> North End</option> 
+                <option> South Station</option> 
+                <option> Northeastern University</option> 
+                <option> Haymarket Square</option> 
+                <option> Fenway </option> 
+                <option> North Station </option> 
+                <option> West End </option> 
+                <option> Theatre District </option> 
+            </select>
+            
+
+       
+          <label for = 'type'> Type of Ride </label>
+            <select name = 'type' id = 'type'>
+                <option> WAV </option>
+                <option> Large Luxury </option>
+                <option> Large</option>
+                <option> Black Luxury</option> 
+                <option>Luxury</option> 
+                <option> Shared</option> 
+                <option> Normal</option> 
+          </select>
+            
+            <button type="submit" class="action-button"> Click to Reveal the Price</button>
+      </fieldset>
+    </form>
+    </div>
+    </div>
+    
+    <!-- banner-bottom-w3layouts -->
+    <section class="banner-bottom-w3layouts py-5" id="about">
+        <div class="container py-md-3">
+            <div class="row banner-grids">
+                <div class="col-md-6 content-left-bottom text-left pr-lg-5">
+                    <h4>SHORTLY ABOUT US</h4>
+                    <p class="mt-2 text-left">  We all know how painful it is to search the prices of different rides again and again in 
+                        mutiple applications to find yourself the
+                        cheaper ride. That is where we come in and help you ensure the cheapest ride with the least amount of
+                        hassle.  Ride Hailer utilizes a Backend
+                        Machine Learning Model to predict the price of Lyft and Uber rides in Boston based on the current weather
+                        patterns and other pertinent features.
+
+                </div>
+                <div class="col-md-6 content-right-bottom text-left">
+                    <img src="static/images/lyft.png" alt="news image" class="img-fluid">
+                    <img src="static/images/uber.png" alt="news image" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //banner-bottom-w3layouts -->
+    <!--/ about -->
+    <section class="services py-5" id="services">
+        <div class="container py-md-5">
+            <div class="header pb-lg-3 pb-3 text-center">
+                <h3 class="tittle mb-lg-3 mb-3">What We Offer</h3>
+            </div>
+            <div class="row ab-info mt-lg-4">
+                <div class="col-lg-4 ab-content">
+                    <div class="ab-content-inner">
+                        <div class="ab-info-con">
+                            <div class="ab-icon mx-auto"><span class="fa fa-search" aria-hidden="true"></span></div>
+                            <h4>Hassle Free Service</h4>
+                            <p>One Stop solution for finding cheaper rides.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 ab-content">
+                    <div class="ab-content-inner">
+                        <div class="ab-info-con">
+                            <div class="ab-icon mx-auto"><span class="fa fa-star-o" aria-hidden="true"></span></div>
+                            <h4>Accurate Predictions</h4>
+                            <p>Predictions based on real-time data.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 ab-content">
+                    <div class="ab-content-inner">
+                        <div class="ab-info-con">
+                            <div class="ab-icon mx-auto"><span class="fa fa-money" aria-hidden="true"></span></div>
+                            <h4>No Fees</h4>
+                            <p>We don't ask a dime from you.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!--// about -->
+    <!--/mid-sec-->
+    <section class="mid-sec py-5" id="Cars">
+        <div class="container py-lg-5">
+            <div class="header pb-lg-3 pb-3 text-center">
+               <h2 class="tittle mb-lg-3 mb-3">Types of Cars to choose from...</h2>
+            </div>
+
+        </div>
+    </section>
+    
+   
+    <!-- Currently Serving -->
+    <section class="contact py-5" id="locations">
+        <div class="container pb-md-5">
+            <div class="header py-lg-5 pb-3 text-center">
+                <h3 class="tittle mb-lg-5 mb-3">Locations we are currently serving</h3>
+            </div>
+            <div class="header py-lg-5 pb-3 text-center">
+                <h5 class="tittle mb-lg-5 mb-3">We are only Serving Boston, MA at the momemnt</h5>
+            </div>
+            <div class="header py-lg-5 pb-3 text-center">
+                <h6 class="tittle mb-lg-5 mb-3">Coming to cities near you, soon!</h6>
+            </div>
+        </div>
+
+    </section>
+   
+
+</body>
+
+</html>
